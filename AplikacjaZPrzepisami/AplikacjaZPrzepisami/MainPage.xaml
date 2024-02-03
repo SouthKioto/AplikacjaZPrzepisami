@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikacjaZPrzepisami.MainPage">
+
+    <StackLayout BackgroundColor="#2EFF00">
+        <StackLayout Margin="20" Spacing="-5">
+            <Label Text="Przepisowo"
+               FontSize="40"
+               FontAttributes="Bold,Italic"
+               TextColor="Black"
+               />
+            <Label Text="Przepis na każdą okazję"
+                   Margin="70,0,0,0"
+                   TextColor="Black"
+                   FontAttributes="Italic"/>
+        </StackLayout>
+
+        <StackLayout Margin="0,50,0,0"
+                     Padding="20">
+            <Label Text="Czego chciałbyś dzisiaj spróbować?"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"/>
+
+            <CarouselView x:Name="displayRecipes"
+                          HeightRequest="200">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="{Binding Title}"
+                                       FontSize="20"
+                                       FontAttributes="Bold,Italic"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Servings}"/>
+                                <Button Text="Sprawdz"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="CheckDetails"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
