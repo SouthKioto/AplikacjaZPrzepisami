@@ -38,7 +38,6 @@ namespace AplikacjaZPrzepisami
                         string jsonContent = await response.Content.ReadAsStringAsync();
                         List<Recipe> recipes = JsonConvert.DeserializeObject<List<Recipe>>(jsonContent);
 
-                        
                         displayRecipes.ItemsSource = recipes;
                     }
                     else
