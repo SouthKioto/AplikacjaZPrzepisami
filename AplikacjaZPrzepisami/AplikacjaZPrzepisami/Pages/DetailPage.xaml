@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikacjaZPrzepisami.Pages.DetailPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#2EFF00" Padding="20">
+            <StackLayout Spacing="-5">
+                <Label Text="Ingredients: "
+                   TextColor="Black"
+                   FontSize="30"
+                   FontAttributes="Bold"/>
+                <Label x:Name="imgrediends_label"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="15"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,30,0,0">
+                <Label Text="Serwings: "
+                       TextColor="Black"
+                       FontSize="30"
+                       FontAttributes="Bold"/>
+                <Label x:Name="people_label"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,30,0,0">
+                <Label Text="Instruction: "
+                       TextColor="Black"
+                       FontSize="30"
+                       FontAttributes="Bold"/>
+                <Label x:Name="instruction_label"
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
