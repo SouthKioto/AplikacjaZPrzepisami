@@ -96,6 +96,12 @@ namespace AplikacjaZPrzepisami
             {
                 await DisplayAlert("Error", ex.Message, "OK");
             }
+        }   
+        
+        private void LikedRecipesPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LikedRecipes());
         }
+
     }
 }

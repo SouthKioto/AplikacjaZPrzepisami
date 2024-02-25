@@ -17,6 +17,11 @@
                    FontAttributes="Italic"/>
         </StackLayout>
 
+        <StackLayout>
+            <Button Text="Liked Recipes"
+                    Clicked="LikedRecipesPage"/>
+        </StackLayout>
+
         <StackLayout Margin="0,50,0,0"
                      Padding="20">
             <Label Text="Czego chciałbyś dzisiaj spróbować?"

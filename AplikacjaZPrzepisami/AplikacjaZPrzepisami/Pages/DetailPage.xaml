@@ -4,6 +4,7 @@
              x:Class="AplikacjaZPrzepisami.Pages.DetailPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#2EFF00" Padding="20">
+
             <StackLayout Spacing="-5">
                 <Label Text="Ingredients: "
                    TextColor="Black"
@@ -35,6 +36,9 @@
                        FontAttributes="Bold"/>
             </StackLayout>
 
+            <StackLayout Margin="0,30,0,0">
+                <Button Text="Add to Liked" Clicked="AddToLikedList" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

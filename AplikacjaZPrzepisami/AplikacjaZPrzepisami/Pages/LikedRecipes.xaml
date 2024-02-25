@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplikacjaZPrzepisami.Pages.LikedRecipes"
+             Title="Twoje przepisy">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="likedRecipes_list">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="{Binding Title}"
+                                       FontSize="25"
+                                       FontAttributes="Bold,Italic"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Servings}"
+                                       FontSize="20"/>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Button Text="Sprawdz"
+                                            VerticalOptions="CenterAndExpand"
+                                            HorizontalOptions="EndAndExpand"
+                                            Clicked="CheckDetails"/>
+                                    <Button Text="Usuń" Clicked="RemoveFromJson"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
